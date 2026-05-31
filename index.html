@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oakhaven - The Mystery Book</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div id="loading-screen" class="loading-screen">
+        <div class="spinner"></div>
+        <p>Abriendo el diario antiguo...</p>
+    </div>
+
+    <div id="main-container" class="main-container">
+        <canvas id="3d-canvas"></canvas>
+        
+        <div id="hud" class="hud hidden">
+            <div class="page-info">
+                <span id="current-page">Página 0/150</span>
+                <span id="chapter-title">Capítulo I: El Descubrimiento</span>
+            </div>
+            
+            <div class="controls">
+                <button id="prev-page" class="nav-btn" title="Página anterior">← Atrás</button>
+                <button id="next-page" class="nav-btn" title="Siguiente página">Adelante →</button>
+            </div>
+
+            <div class="special-actions">
+                <button id="reveal-invisible" class="action-btn" title="Revelar tinta invisible">👻 Revelar Secreto</button>
+                <button id="decode-cipher" class="action-btn" title="Descodificar mensaje">🔐 Descodificar</button>
+                <button id="examine-page" class="action-btn" title="Examinar página">🔍 Examinar</button>
+            </div>
+
+            <div id="choices-container" class="choices-container"></div>
+            <div id="notification" class="notification"></div>
+        </div>
+
+        <div id="pause-menu" class="pause-menu hidden">
+            <div class="menu-content">
+                <h1>PAUSADO</h1>
+                <button id="resume-btn">Continuar</button>
+                <button id="settings-btn">Configuración</button>
+                <button id="save-btn">Guardar Progreso</button>
+                <button id="quit-btn">Salir</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts de Three.js y Motor del Juego -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="src/engine/mysteriumEngine.js"></script>
+    <script src="src/engine/storyEngine.js"></script>
+    <script src="src/graphics/bookRenderer3D.js"></script>
+    <script src="src/graphics/pageEffects.js"></script>
+    <script src="src/story/narrative.js"></script>
+    <script src="src/ui/controls.js"></script>
+    <script src="src/renderer.js"></script>
+</body>
+</html>
