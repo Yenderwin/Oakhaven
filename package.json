@@ -1,0 +1,23 @@
+{
+  "name": "oakhaven",
+  "version": "1.0.0",
+  "description": "An interactive 3D mystery book game with plot twists and revelations",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production"
+  },
+  "keywords": ["game", "mystery", "interactive", "3d", "book"],
+  "author": "Yenderwin",
+  "license": "MIT",
+  "dependencies": {
+    "three": "^r128",
+    "electron-squirrel-startup": "^1.1.0"
+  },
+  "devDependencies": {
+    "electron": "^latest",
+    "webpack": "^5",
+    "webpack-cli": "^5"
+  }
+}
